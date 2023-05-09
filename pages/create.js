@@ -12,7 +12,8 @@ export default function CreatePlacePage() {
   const router = useRouter();
 
   function addPlace(place) {
-    console.log('Place added (but not really...)');
+    // console.log('Place added (but not really...)');
+    
   }
 
   return (
@@ -25,3 +26,10 @@ export default function CreatePlacePage() {
     </>
   );
 }
+
+/*
+- In `pages/create.js`, write the `addPlace` function to start a `POST` request.
+- Write the `POST` API route in `pages/api/places/index.js`.
+- Submitting the form should redirect the user to the homepage `/`.
+*/
+
