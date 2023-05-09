@@ -11,8 +11,24 @@ const StyledBackLink = styled(StyledLink)`
 export default function CreatePlacePage() {
   const router = useRouter();
 
-  function addPlace(place) {
-    console.log('Place added (but not really...)');
+  async function addPlace(place) {
+    // console.log('Place added (but not really...)');
+    const response = await fetch ("/api/places", {
+      method: "POST",
+      body: JSON.stringify(place),
+      headers: {
+        "Content-Type": "application/json",
+      }
+    });
+
+    if (response.ok) {
+      await response.json();
+      // places.mutate();
+      // event.target.reset();
+      router.push("/");
+    } else {
+    console.error(`Error: ${response.status}`);
+    }
   }
 
   return (
@@ -25,3 +41,11 @@ export default function CreatePlacePage() {
     </>
   );
 }
+
+
+/*
+- In `pages/create.js`, write the `addPlace` function to start a `POST` request.
+- Write the `POST` API route in `pages/api/places/index.js`.
+- Submitting the form should redirect the user to the homepage `/`.
+*/
+
