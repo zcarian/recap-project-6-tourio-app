@@ -1,5 +1,7 @@
 # Recap Project 6: Tourio App
 
+![](https://github.com/zcarian/recap-project-6-tourio-app/blob/main/public/preview.gif)
+
 In this project you will build a Tourio App, the best friend of all travelers: it displays sights you want to visit and lets you edit them.
 
 ## Task
